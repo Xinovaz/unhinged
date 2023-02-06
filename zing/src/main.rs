@@ -48,8 +48,9 @@ use crow::{
 };
 use rand::prelude::*;
 use rand::Rng;
+use std::{thread, time};
 
-const DEFAULT_SPEED: u8 = 4;
+const DEFAULT_SPEED: u64 = 20; // ms
 
 const WINDOW_WIDTH: u32 = 1080;
 const WINDOW_HEIGHT: u32 = 720;
@@ -147,11 +148,11 @@ impl World {
 #[derive(Debug)]
 pub struct Game {
 	map: World,
-	speed: u8, // steps per second
+	speed: u64, // steps per second
 }
 
 impl Game {
-	pub fn new(speed: u8) -> Game {
+	pub fn new(speed: u64) -> Game {
 		Game {
 			map: World::new(),
 			speed,
@@ -259,7 +260,7 @@ impl Game {
 						}
 					},
 					Cell::Metal => {
-						if (fluid == 3 || fluid == 4) && (burning == 2 || burning == 3) {
+						if (fluid != 3 && fluid != 4) && (burning == 2 || burning == 3) {
 							world_map[j][i] = Cell::Fluid;
 						} else if fluid >= 1 {
 							world_map[j][i] = Cell::Living;
@@ -295,7 +296,7 @@ impl Game {
 }
 
 fn main() -> Result<(), crow::Error> {
-	let mut game = Game::default();
+	let mut game = Game::random();
 
 	let event_loop = EventLoop::new();
     let mut ctx = Context::new(
@@ -372,6 +373,10 @@ fn main() -> Result<(), crow::Error> {
             },
             Event::MainEventsCleared => ctx.window().request_redraw(),
             Event::RedrawRequested(_) => {
+
+            	game.tick();
+            	thread::sleep(time::Duration::from_millis(game.speed));
+
                 let mut surface = Scaled::new(ctx.surface(), (CELL_SIZE, CELL_SIZE));
 
                 ctx.clear_color(&mut surface, (0.4, 0.4, 0.8, 1.0));

@@ -1,1 +1,1 @@
-C:\Users\samss\Documents\GitHub\unhinged\zing\target\debug\zing.exe: C:\Users\samss\Documents\GitHub\unhinged\zing\src\main.rs
+/Users/student/Documents/GitHub/unhinged/zing/target/debug/zing: /Users/student/Documents/GitHub/unhinged/zing/src/main.rs

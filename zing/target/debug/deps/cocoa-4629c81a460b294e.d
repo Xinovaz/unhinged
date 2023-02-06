@@ -1,0 +1,12 @@
+/Users/student/Documents/GitHub/unhinged/zing/target/debug/deps/cocoa-4629c81a460b294e.rmeta: /Users/student/.cargo/registry/src/github.com-1ecc6299db9ec823/cocoa-0.20.2/src/lib.rs /Users/student/.cargo/registry/src/github.com-1ecc6299db9ec823/cocoa-0.20.2/src/appkit.rs /Users/student/.cargo/registry/src/github.com-1ecc6299db9ec823/cocoa-0.20.2/src/base.rs /Users/student/.cargo/registry/src/github.com-1ecc6299db9ec823/cocoa-0.20.2/src/foundation.rs /Users/student/.cargo/registry/src/github.com-1ecc6299db9ec823/cocoa-0.20.2/src/quartzcore.rs /Users/student/.cargo/registry/src/github.com-1ecc6299db9ec823/cocoa-0.20.2/src/macros.rs
+
+/Users/student/Documents/GitHub/unhinged/zing/target/debug/deps/libcocoa-4629c81a460b294e.rlib: /Users/student/.cargo/registry/src/github.com-1ecc6299db9ec823/cocoa-0.20.2/src/lib.rs /Users/student/.cargo/registry/src/github.com-1ecc6299db9ec823/cocoa-0.20.2/src/appkit.rs /Users/student/.cargo/registry/src/github.com-1ecc6299db9ec823/cocoa-0.20.2/src/base.rs /Users/student/.cargo/registry/src/github.com-1ecc6299db9ec823/cocoa-0.20.2/src/foundation.rs /Users/student/.cargo/registry/src/github.com-1ecc6299db9ec823/cocoa-0.20.2/src/quartzcore.rs /Users/student/.cargo/registry/src/github.com-1ecc6299db9ec823/cocoa-0.20.2/src/macros.rs
+
+/Users/student/Documents/GitHub/unhinged/zing/target/debug/deps/cocoa-4629c81a460b294e.d: /Users/student/.cargo/registry/src/github.com-1ecc6299db9ec823/cocoa-0.20.2/src/lib.rs /Users/student/.cargo/registry/src/github.com-1ecc6299db9ec823/cocoa-0.20.2/src/appkit.rs /Users/student/.cargo/registry/src/github.com-1ecc6299db9ec823/cocoa-0.20.2/src/base.rs /Users/student/.cargo/registry/src/github.com-1ecc6299db9ec823/cocoa-0.20.2/src/foundation.rs /Users/student/.cargo/registry/src/github.com-1ecc6299db9ec823/cocoa-0.20.2/src/quartzcore.rs /Users/student/.cargo/registry/src/github.com-1ecc6299db9ec823/cocoa-0.20.2/src/macros.rs
+
+/Users/student/.cargo/registry/src/github.com-1ecc6299db9ec823/cocoa-0.20.2/src/lib.rs:
+/Users/student/.cargo/registry/src/github.com-1ecc6299db9ec823/cocoa-0.20.2/src/appkit.rs:
+/Users/student/.cargo/registry/src/github.com-1ecc6299db9ec823/cocoa-0.20.2/src/base.rs:
+/Users/student/.cargo/registry/src/github.com-1ecc6299db9ec823/cocoa-0.20.2/src/foundation.rs:
+/Users/student/.cargo/registry/src/github.com-1ecc6299db9ec823/cocoa-0.20.2/src/quartzcore.rs:
+/Users/student/.cargo/registry/src/github.com-1ecc6299db9ec823/cocoa-0.20.2/src/macros.rs:
