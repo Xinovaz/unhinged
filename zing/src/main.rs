@@ -298,6 +298,8 @@ impl Game {
 fn main() -> Result<(), crow::Error> {
 	let mut game = Game::random();
 
+	let mut running = false;
+
 	let event_loop = EventLoop::new();
     let mut ctx = Context::new(
         WindowBuilder::new().with_inner_size(LogicalSize::new(WINDOW_WIDTH, WINDOW_HEIGHT)),
@@ -318,7 +320,7 @@ fn main() -> Result<(), crow::Error> {
                     if input.state == ElementState::Pressed
                         && input.virtual_keycode == Some(VirtualKeyCode::Space)
                     {
-                        game.tick();
+                        running = !running;
                         println!("Deaths by Fire: {:?}\nDeaths by Sickness: {:?}\nDeaths by Drowning: {:?}", 
 					    	game.map.deaths_fire,
 					    	game.map.deaths_sick,
@@ -374,9 +376,10 @@ fn main() -> Result<(), crow::Error> {
             Event::MainEventsCleared => ctx.window().request_redraw(),
             Event::RedrawRequested(_) => {
 
-            	game.tick();
-            	thread::sleep(time::Duration::from_millis(game.speed));
-
+            	if running {
+            		game.tick();
+            		thread::sleep(time::Duration::from_millis(game.speed));
+            	}
                 let mut surface = Scaled::new(ctx.surface(), (CELL_SIZE, CELL_SIZE));
 
                 ctx.clear_color(&mut surface, (0.4, 0.4, 0.8, 1.0));
